@@ -25,7 +25,7 @@ answers = [
 correct_answers_index = [1, 2, 0, 3, 1]
 punt = 0 # Se inicializa el contador de puntos
 # El usuario deberá contestar 3 preguntas
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 for q, a, c in questions_to_ask:
     print(q)
     for i, answer in enumerate(a):
